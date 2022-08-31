@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data</title>
+</head>
+<body>
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+    <table>
+            <tr>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Firstname
+                </th>
+                <th>
+                    Lastname
+                </th>
+                <th>
+                    Date of Birth
+                </th>
+                <th>
+                    Address
+                </th>
+                <th>
+                    Passport
+                </th>
+            </tr>
+            {% for user in users %}
+                <tr>
+                    <td>
+                        {{ user.id }}
+                    </td>
+                    <td>
+                        {{ user.firstname }}
+                    </td>
+                    <td>
+                        {{ user.lastname }}
+                    </td>
+                    <td>
+                        {{ user.dob }}
+                    </td>
+                    <td>
+                        {{ user.address }}
+                    </td>
+                    <td>
+                        {{ user.passport }}
+                    </td>
+                </tr>
+            {% endfor %}
+    </table>
+</body>
+</html>
